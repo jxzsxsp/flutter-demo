@@ -11,6 +11,9 @@ class Demo extends StatelessWidget {
 
     return new MaterialApp(
       title: "Demo",
+      theme: new ThemeData(
+        primaryColor: Colors.green,
+      ),
       home: new RandomWords(),
     );
   }
