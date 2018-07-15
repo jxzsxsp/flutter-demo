@@ -35,6 +35,9 @@ class RandomWordsState extends State<RandomWords> {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("Startup Name Generator"),
+        actions: <Widget>[
+          new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved),
+        ],
       ),
       body: _buildSuggestions(),
     );
@@ -85,6 +88,52 @@ class RandomWordsState extends State<RandomWords> {
           }
         });
       },
+    );
+  }
+
+  void _pushSaved() {
+    Navigator.of(context).push(
+      new MaterialPageRoute(
+          builder: (context) {
+            final tiles = _saved.map(
+                (pair) {
+                  final _alreadySaved = _saved.contains(pair);
+
+                  return new ListTile(
+                    title: new Text(
+                      pair.asPascalCase,
+                      style: _biggerFont,
+                    ),
+                    trailing: new Icon(
+                      _alreadySaved?Icons.favorite:Icons.favorite_border,
+                      color: _alreadySaved?Colors.red:null,
+                    ),
+                    onTap: (){
+                      setState(() {
+                        if(_alreadySaved) {
+                          _saved.remove(pair);
+                        } else {
+                          _saved.add(pair);
+                        }
+                      });
+                    },
+                  );
+                }
+            );
+
+            final divided = ListTile.divideTiles(
+                context: context,
+                tiles: tiles
+            ).toList();
+
+            return new Scaffold(
+              appBar: new AppBar(
+                title: new Text("Saved Suggesttions"),
+              ),
+              body: new ListView(children: divided),
+            );
+          },
+      ),
     );
   }
 
