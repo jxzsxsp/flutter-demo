@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/demo/AppBarBottomSample.dart';
+import 'widgets/demo/AnimatedListSample.dart';
 
 
-void main() => runApp(new AppBarBottomSample());
+void main() => runApp(new AnimatedListSample());
