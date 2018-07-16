@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/demo/demo.dart';
+import 'widgets/demo/BasicAppBarSample.dart';
 
 
-void main() => runApp(new ExpansionTileSample());
+void main() => runApp(new BasicAppBarSample());
