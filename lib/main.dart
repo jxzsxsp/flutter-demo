@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/demo/AnimatedListSample.dart';
+import 'widgets/demo/PlatformView.dart';
 
 
-void main() => runApp(new AnimatedListSample());
+void main() => runApp(new PlatformView());
