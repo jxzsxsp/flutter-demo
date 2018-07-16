@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/demo/BasicAppBarSample.dart';
+import 'widgets/demo/AppBarBottomSample.dart';
 
 
-void main() => runApp(new BasicAppBarSample());
+void main() => runApp(new AppBarBottomSample());
