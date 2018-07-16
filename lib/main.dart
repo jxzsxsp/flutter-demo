@@ -2,4 +2,4 @@ import 'package:flutter/material.dart';
 import 'widgets/demo/demo.dart';
 
 
-void main() => runApp(new WordsDemo());
+void main() => runApp(new TabbedAppBarSample());
