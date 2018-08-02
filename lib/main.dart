@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/demo/PlatformView.dart';
+import 'widgets/demo/demo.dart';
 
 
-void main() => runApp(new PlatformView());
+void main() => runApp(new HttpClientDemo());
